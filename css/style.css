@@ -1,0 +1,47 @@
+body {
+    background: #FFF;
+}
+a {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    background: #FFF;
+    z-index: 2;
+
+}
+.header .container {
+    position: relative;
+}
+.logo {
+    margin: 0 auto;
+    width: 270px;
+    height: 100px;
+    display: block;
+    background-image: url(../img/dai.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
+}
+.nav {
+    overflow: hidden;
+}
+.nav a {
+    margin: 15px;
+}
+.nav .left {
+    position: absolute;
+    left: 0px;
+    top: 40px;
+}
+.nav .right {
+    position: absolute;
+    right: 0px;
+    top: 40px;
+}
+
+
+
