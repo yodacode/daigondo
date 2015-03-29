@@ -1,0 +1,14 @@
+body {
+    background: #ebe;
+}
+
+.header {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    max-width: 250px;
+    width: 100%;
+}
