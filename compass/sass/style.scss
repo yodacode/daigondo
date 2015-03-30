@@ -1,0 +1,65 @@
+/*-------------------------------------------*\
+  VARIABLES
+/*-------------------------------------------*/
+
+/*-------------------------------------------*\
+  GLOBAL
+/*-------------------------------------------*/
+body {
+    background: #FFF;
+}
+a {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+/*-------------------------------------------*\
+  HEADER
+/*-------------------------------------------*/
+.header {
+    position: fixed;
+    width: 100%;
+    background: #FFF;
+    z-index: 2;
+
+    .container {
+        position: relative;
+    }
+
+    .header__logo {
+        margin: 0 auto;
+        width: 270px;
+        height: 100px;
+        display: block;
+        background-image: url(../img/dai.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
+    }
+}
+
+
+/*-------------------------------------------*\
+  NAV
+/*-------------------------------------------*/
+.nav {
+    overflow: hidden;
+
+    a {
+        margin: 15px;
+    }
+    .nav__left {
+        position: absolute;
+        left: 0px;
+        top: 40px;
+    }
+    .nav__right {
+        position: absolute;
+        right: 0px;
+        top: 40px;
+    }
+}
+
+
+
+
