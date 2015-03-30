@@ -36,11 +36,48 @@
         </section>
         <div class="row">
         <div id="isotope" class="isotope">
-            <?php for ($i=1; $i <= 14; $i++) : ?>
-                <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
-                    <img src='img/img<?php echo $i ?>.jpg'/>
-                </article>
-            <?php endfor; ?>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img1.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img2.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img3.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img4.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img5.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img6.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img7.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-8 col-md-8 col-sm-6" data-item>
+                <img src='img/img8.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img9.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img10.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img11.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img12.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img13.jpg'/>
+            </article>
+            <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
+                <img src='img/img14.jpg'/>
+            </article>
         </div>
         </div>
     </section>
