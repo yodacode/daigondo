@@ -1,0 +1,1 @@
+cd js/ && npm install
