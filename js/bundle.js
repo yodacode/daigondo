@@ -55,6 +55,7 @@ $(window).load(function() {
     $('[data-item]').each(function () {
         new Item($(this));
     });
+
 });
 },{"isotope-layout":"/Users/benjamin/Sites/daigondo/js/node_modules/isotope-layout/js/isotope.js","jquery":"/Users/benjamin/Sites/daigondo/js/node_modules/jquery/dist/jquery.js"}],"/Users/benjamin/Sites/daigondo/js/node_modules/isotope-layout/js/isotope.js":[function(require,module,exports){
 /*!

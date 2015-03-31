@@ -54,4 +54,5 @@ $(window).load(function() {
     $('[data-item]').each(function () {
         new Item($(this));
     });
+
 });
