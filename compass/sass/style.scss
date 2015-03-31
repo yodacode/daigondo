@@ -14,7 +14,7 @@ body {
     background: #FFF;
 }
 a {     
-    font-size: 1.1em;
+    font-size: 1.45em;
     color: $blue;
     text-decoration: none;
     padding-bottom: 4px;
@@ -61,12 +61,12 @@ a {
 
     .header__logo {
         margin: 0 auto;
-        width: 200px;
+        width: 224px;
         height: 100px;
         display: block;        
         background-size: 100%;
         background-repeat: no-repeat;        
-        margin-top: -35px;
+        margin-top: -86px;
         svg {
             width: 100%;
         }
@@ -81,9 +81,10 @@ a {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 50px;
+    margin-top: 33px;
     .introduction__title {
         color: $yellow;
-        font-size: 2.1em;
+        font-size: 2.6em;
         letter-spacing: 4px;
         margin-bottom: 16px;
     }
@@ -123,6 +124,38 @@ a {
         height: 100%;
         width: 100%;
         background-color: $yellow;
+        padding: 25px;
+        overflow: hidden;
+        color: #FFF;
+        
+    }
+
+    .isotope__item__mask__separator {
+        width: 25px;
+        height: 4px;
+        background: #FFF;
+        margin-bottom: 15px;
+    }
+
+    .isotope__item__mask__paragraph {
+        font-size: 1.3em;
+        width: 53%;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        -webkit-animation-duration: 0.5s; /* Chrome, Safari, Opera */
+        animation-duration: 0.5s;
+    }
+
+    .isotope__item__mask__title {
+        text-transform: uppercase;
+        font-weight: normal;
+        letter-spacing: 3px;
+        font-size: 1.5em;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        -webkit-animation-duration: 0.2s; /* Chrome, Safari, Opera */
+        animation-duration: 0.2s;
+
     }
 }
 
@@ -150,6 +183,7 @@ a {
 @media (min-width: 2200px) {
     .container-fluid {
         width: 2200px;
+        position: relative;
     }
 }
 
