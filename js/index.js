@@ -3,30 +3,43 @@ var $ = require('jquery');
 
 var Item = function (item) {
     this.item = item;
+    this.needResize = false;
     this.build();
 };
+
 Item.prototype.build = function () {
+    this.item.find('.isotope__item__mask').remove();
     this.mask = $('<div>').addClass('isotope__item__mask').attr('data-mask', '').hide();
+    this.mask.css({
+        'height': this.item.find('img').height(),
+        'width': this.item.find('img').width(),
+        'margin-left': '30px',
+        'margin-top': '30px',
+    })
     this.item.prepend(this.mask);
+    this.needResize = false;
     this.bind();
 };
+
 Item.prototype.bind = function () {
-    this.item.on('')
+    var that = this;
+
     this.item.hover(
         function() {
-            $(this).find('[data-mask]').fadeIn();
-            $(this).stop();
+            if (that.needResize) {
+                that.build();
+            }
+            $(this).find('[data-mask]').stop(true, false).fadeIn();
+
         }, function() {
-            $(this).find('[data-mask]').fadeOut();
-            $(this).stop();
+            $(this).find('[data-mask]').stop(true, false).fadeOut();
         }
     );
+
+    $(window).on('resize', function () {
+        that.needResize = true;
+    });
 };
-
-// Item.prototype.bind = function () {
-
-// };
-
 
 
 $(window).load(function() {
@@ -38,9 +51,7 @@ $(window).load(function() {
         layoutMode: 'masonry',
     });
 
-    // $('[data-item]').each(function () {
-    //     new Item($(this));
-    // });
-
-
+    $('[data-item]').each(function () {
+        new Item($(this));
+    });
 });

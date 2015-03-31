@@ -13,23 +13,37 @@ $grey: #babcbe;
 body {
     background: #FFF;
 }
-a {
-    font-weight: bold;
-    text-decoration: underline;
+a {     
     font-size: 1.1em;
     color: $blue;
+    text-decoration: none;
+    padding-bottom: 4px;
+    font-weight: normal;
+    &:hover {
+        text-decoration: none;        
+    }
     &.green {
         color: $green;
+        border-bottom: solid 3px $green;
     }
     &.red {
         color: $red;
+        border-bottom: solid 3px $red;
     }
     &.yellow {
         color: $yellow;
+        border-bottom: solid 3px $yellow;
     }
     &.blue {
         color: $blue;
+        border-bottom: solid 3px $blue;
     }
+}
+.separator {
+    width: 50px;
+    height: 3px;
+    background: $grey;
+    margin: 0 auto;
 }
 /*-------------------------------------------*\
   HEADER
@@ -39,6 +53,7 @@ a {
     width: 100%;
     background: #FFF;
     z-index: 2;
+    height: 135px;
 
     .container {
         position: relative;
@@ -48,12 +63,13 @@ a {
         margin: 0 auto;
         width: 200px;
         height: 100px;
-        display: block;
-        background-image: url(../img/dai.png);
+        display: block;        
         background-size: 100%;
-        background-repeat: no-repeat;
-        margin-bottom: 15px;
-        margin-top: 15px;
+        background-repeat: no-repeat;        
+        margin-top: -35px;
+        svg {
+            width: 100%;
+        }
     }
 }
 
@@ -67,13 +83,16 @@ a {
     margin-bottom: 50px;
     .introduction__title {
         color: $yellow;
-        font-size: 2em;
+        font-size: 2.1em;
+        letter-spacing: 4px;
+        margin-bottom: 16px;
     }
     .introduction__description {
-        color: $grey;
-        border-top: solid 1px $grey;
+        color: $grey;        
         display: inline-block;
         padding-top: 8px;
+        letter-spacing: 5px;
+        margin-top: 8px;
     }
 }
 /*-------------------------------------------*\
@@ -90,10 +109,10 @@ a {
     .isotope__item {
         max-width: 100%;
         position: relative;
-        padding: 0px !important;
+        padding: 30px !important;        
+        
         img {
-            max-width: 87%;
-            margin: 6%;
+            max-width: 100%; 
         }
     }
 
@@ -117,13 +136,20 @@ a {
     }
     .nav__left {
         position: absolute;
-        left: 0px;
+        left: 30px;
         top: 40px;
     }
     .nav__right {
         position: absolute;
-        right: 0px;
+        right: 30px;
         top: 40px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 2200px) {
+    .container-fluid {
+        width: 2200px;
     }
 }
 
