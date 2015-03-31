@@ -127,6 +127,54 @@ a {
 }
 
 /*-------------------------------------------*\
+  INTRODUCTION
+/*-------------------------------------------*/
+.introduction {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    .introduction__title {
+        color: $yellow;
+        font-size: 2em;
+    }
+    .introduction__description {
+        color: $grey;
+        border-top: solid 1px $grey;
+        display: inline-block;
+        padding-top: 8px;
+    }
+}
+/*-------------------------------------------*\
+  SITE CONTENT
+/*-------------------------------------------*/
+.site-content {
+    padding-top: 128px;    
+}
+
+/*-------------------------------------------*\
+  ISOTOPE
+/*-------------------------------------------*/
+.isotope {
+    .isotope__item {
+        width: 30%;
+        margin: 1.5%;
+        position: relative;
+        img {
+            width: 100%;            
+        }
+    }
+
+    .isotope__item__mask {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        background-color: $yellow;    
+    }
+}
+
+/*-------------------------------------------*\
   NAV
 /*-------------------------------------------*/
 .nav {
@@ -152,6 +200,8 @@ a {
         width: 2200px;
     }
 }
+
+
 
 
 

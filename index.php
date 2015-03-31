@@ -73,8 +73,6 @@
         </div>
     </header>
 
-
-
     <section class="container-fluid site-content">
         <section class="introduction">
             <h1 class="introduction__title">Morceaux choisis</h1>
@@ -88,10 +86,7 @@
                     <img src='img/img<?php echo $i; ?>.jpg'/>
                 </article>
             <?php endfor; ?>
-            
-            
-            
-        
+
         </div>
     </section>
     <script type="text/javascript" src="js/bundle.js"></script>

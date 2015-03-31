@@ -28,6 +28,7 @@ Item.prototype.bind = function () {
         function() {
             if (that.needResize) {
                 that.build();
+                
             }
             $(this).find('[data-mask]').stop(true, false).fadeIn();
 
@@ -54,4 +55,5 @@ $(window).load(function() {
     $('[data-item]').each(function () {
         new Item($(this));
     });
+
 });

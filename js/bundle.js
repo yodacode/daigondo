@@ -4,6 +4,7 @@ var $ = require('jquery');
 
 var Item = function (item) {
     this.item = item;
+<<<<<<< HEAD
     this.needResize = false;
     this.build();
 };
@@ -41,6 +42,32 @@ Item.prototype.bind = function () {
         that.needResize = true;
     });
 };
+=======
+    this.build();
+};
+Item.prototype.build = function () {
+    this.mask = $('<div>').addClass('isotope__item__mask').attr('data-mask', '').hide();
+    this.item.prepend(this.mask);
+    this.bind();
+};
+Item.prototype.bind = function () {
+    this.item.on('')
+    this.item.hover(
+        function() {
+            $(this).find('[data-mask]').fadeIn();
+            $(this).stop();
+        }, function() {
+            $(this).find('[data-mask]').fadeOut();
+            $(this).stop();
+        }
+    );
+};
+
+// Item.prototype.bind = function () {
+
+// };
+
+>>>>>>> 0a4c76ed11920113ece3bc9e65ac367c8153a717
 
 
 $(window).load(function() {
@@ -49,12 +76,23 @@ $(window).load(function() {
     var iso = new Isotope(container, {
         // options
         itemSelector: '.isotope__item',
+<<<<<<< HEAD
         layoutMode: 'masonry',
     });
 
     $('[data-item]').each(function () {
         new Item($(this));
     });
+=======
+        layoutMode: 'masonry'        
+    });
+
+    $('[data-item]').each(function () {
+        new Item($(this));
+    });
+
+
+>>>>>>> 0a4c76ed11920113ece3bc9e65ac367c8153a717
 });
 },{"isotope-layout":"/Users/benjamin/Sites/daigondo/js/node_modules/isotope-layout/js/isotope.js","jquery":"/Users/benjamin/Sites/daigondo/js/node_modules/jquery/dist/jquery.js"}],"/Users/benjamin/Sites/daigondo/js/node_modules/isotope-layout/js/isotope.js":[function(require,module,exports){
 /*!
