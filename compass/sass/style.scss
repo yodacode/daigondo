@@ -1,3 +1,5 @@
+@import "compass";
+
 /*-------------------------------------------*\
   VARIABLES
 /*-------------------------------------------*/
@@ -6,21 +8,93 @@ $yellow: #fec785;
 $blue: #4c7ab8;
 $red: #f89692;
 $grey: #babcbe;
+$brown: #FFF4DC;
+$blueLight: #9ECCCF;
+
 
 /*-------------------------------------------*\
   GLOBAL
 /*-------------------------------------------*/
-body {
-    background: #FFF;
+body, header {
+    background-color: #FFF;
+    @include transition(background-color 1s .1s, color 2s);
 }
-a {     
+a:focus, a:hover {
+    text-decoration: none;
+}
+
+body.blue {
+    color: red;
+    background-color: $blueLight;
+    .header {
+        background-color: $blueLight;
+    }
+    .introduction {
+        .introduction__title {
+            color: #FFF;
+        }
+        .introduction__description {
+            color: #FFF;
+        }
+        .introdcution__paragraph {
+            color: #FFF;
+        }        
+    }
+    .green {
+        color: #FFF;
+        border-color: #FFF;
+    }
+    .separator {    
+        background: #FFF;  
+    }
+}
+
+body.brown {
+    color: red;
+    background-color: $brown;
+    .header {
+        background-color: $brown;
+    }
+    .introduction {
+        .introduction__title {
+            color: $blue;
+        }
+        .introduction__description {
+            color: $blue;
+        }
+        .introdcution__paragraph {
+            color: $blue;
+        }
+        .introduction__link {
+            border-color: $blue;
+        }
+    }
+    .separator {    
+        background: $blue;    
+    }
+}
+body.white {
+    color: red;
+    background-color: #FFF;
+    .header {
+        background-color: #FFF;
+    }
+}
+
+.toto {
+    width: 300px;
+    height: 300px;
+    background: #F0F;
+}
+
+a {
     font-size: 1.45em;
     color: $blue;
     text-decoration: none;
     padding-bottom: 4px;
     font-weight: normal;
     &:hover {
-        text-decoration: none;        
+        text-decoration: none;
     }
     &.green {
         color: $green;
@@ -63,9 +137,9 @@ a {
         margin: 0 auto;
         width: 224px;
         height: 100px;
-        display: block;        
+        display: block;
         background-size: 100%;
-        background-repeat: no-repeat;        
+        background-repeat: no-repeat;
         margin-top: -86px;
         svg {
             width: 100%;
@@ -89,11 +163,26 @@ a {
         margin-bottom: 16px;
     }
     .introduction__description {
-        color: $grey;        
+        color: $grey;
         display: inline-block;
         padding-top: 8px;
         letter-spacing: 5px;
         margin-top: 8px;
+    }
+    .introdcution__paragraph {
+        color: $yellow;
+        text-transform: none;
+        font-size: 1.3em;        
+        margin-top: 40px;
+        p {
+            margin-bottom: 30px;
+        }
+    }
+    .introduction__link {
+        font-size: 1em;
+        border-bottom: solid 3px #FFF;
+        display: inline-block;
+        margin-top: 40px;
     }
 }
 /*-------------------------------------------*\
@@ -110,10 +199,10 @@ a {
     .isotope__item {
         max-width: 100%;
         position: relative;
-        padding: 30px !important;        
-        
+        padding: 30px !important;
+
         img {
-            max-width: 100%; 
+            max-width: 100%;
         }
     }
 
@@ -127,7 +216,7 @@ a {
         padding: 25px;
         overflow: hidden;
         color: #FFF;
-        
+
     }
 
     .isotope__item__mask__separator {
@@ -186,9 +275,3 @@ a {
         position: relative;
     }
 }
-
-
-
-
-
-

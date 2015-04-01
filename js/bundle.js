@@ -1,13 +1,15 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/Benjamin/Sites/Dai/js/index.js":[function(require,module,exports){
+(function (global){
 var Isotope = require('isotope-layout');
-var $ = require('jquery');
+global.$ = require('jquery');
+
 
 var currentColor = 0;
 
 var Item = function (item) {
     this.item = item;
     this.needResize = false;
-    
+
 
     this.build();
 };
@@ -20,7 +22,7 @@ Item.prototype.pickColor = function () {
         '#F29A94',
         '#B6D5E0',
     ];
-     
+
     if (currentColor === colors.length - 1) {
         currentColor = 0;
     } else {
@@ -34,9 +36,9 @@ Item.prototype.build = function () {
     this.item.find('.isotope__item__mask').remove();
     this.mask = $('<div>').addClass('isotope__item__mask')
         .attr('data-mask', '')
-        .css('background-color', this.pickColor())        
+        .css('background-color', this.pickColor())
         .hide();
-    
+
     this.mask.css({
         'height': this.item.find('img').height(),
         'width': this.item.find('img').width(),
@@ -74,7 +76,7 @@ Item.prototype.bind = function () {
                 that.build();
             }
             $(this).find('[data-mask]').stop(true, false).fadeIn(400);
-        }, function() {            
+        }, function() {
             $(this).find('[data-mask]').stop(true, false).fadeOut(400);
         }
     );
@@ -84,6 +86,49 @@ Item.prototype.bind = function () {
     });
 };
 
+var Page = function () {
+    this.linkProfil = $('[data-link-profil]');
+    this.linkPortfolio = $('[data-link-portfolio]');
+    this.linkContact = $('[data-link-contact]');
+    this.bind();
+    console.log(this);
+};
+
+Page.prototype.bind = function () {
+    var that = this;
+
+    this.linkPortfolio.on('click', function (e) {
+        e.preventDefault();
+        that.changeColor('white');
+        that.getPage('portfolio');
+    });
+
+    this.linkProfil.on('click', function (e) {
+        e.preventDefault();
+        that.changeColor('blue');
+        that.getPage('profil');
+    });
+
+    this.linkContact.on('click', function (e) {
+        e.preventDefault();
+        that.changeColor('brown');
+        that.getPage('contact');
+    });
+};
+
+Page.prototype.changeColor = function (color) {
+    $('body').removeClass('white brown blue')
+    $('body').addClass(color);
+};
+
+Page.prototype.getPage = function (page) {
+    $('[data-page]').hide();
+    $('[data-page-' + page + ']').show();
+};
+
+$(function () {
+    var page = new Page();
+});
 
 $(window).load(function() {
     var container = document.querySelector('#isotope');
@@ -99,6 +144,7 @@ $(window).load(function() {
     });
 
 });
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"isotope-layout":"/Users/Benjamin/Sites/Dai/js/node_modules/isotope-layout/js/isotope.js","jquery":"/Users/Benjamin/Sites/Dai/js/node_modules/jquery/dist/jquery.js"}],"/Users/Benjamin/Sites/Dai/js/node_modules/isotope-layout/js/isotope.js":[function(require,module,exports){
 /*!
  * Isotope v2.1.1

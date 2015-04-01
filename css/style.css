@@ -4,12 +4,100 @@
 /*-------------------------------------------*\
   GLOBAL
 /*-------------------------------------------*/
-/* line 13, ../compass/sass/style.scss */
-body {
+/* line 18, ../compass/sass/style.scss */
+body, header {
+  background-color: #FFF;
+  -moz-transition: background-color 1s 0.1s, color 2s;
+  -o-transition: background-color 1s 0.1s, color 2s;
+  -webkit-transition: background-color 1s, color 2s;
+  -webkit-transition-delay: 0.1s, 0s;
+  transition: background-color 1s 0.1s, color 2s;
+}
+
+/* line 22, ../compass/sass/style.scss */
+a:focus, a:hover {
+  text-decoration: none;
+}
+
+/* line 26, ../compass/sass/style.scss */
+body.blue {
+  color: red;
+  background-color: #9ECCCF;
+}
+/* line 29, ../compass/sass/style.scss */
+body.blue .header {
+  background-color: #9ECCCF;
+}
+/* line 33, ../compass/sass/style.scss */
+body.blue .introduction .introduction__title {
+  color: #FFF;
+}
+/* line 36, ../compass/sass/style.scss */
+body.blue .introduction .introduction__description {
+  color: #FFF;
+}
+/* line 39, ../compass/sass/style.scss */
+body.blue .introduction .introdcution__paragraph {
+  color: #FFF;
+}
+/* line 43, ../compass/sass/style.scss */
+body.blue .green {
+  color: #FFF;
+  border-color: #FFF;
+}
+/* line 47, ../compass/sass/style.scss */
+body.blue .separator {
   background: #FFF;
 }
 
-/* line 16, ../compass/sass/style.scss */
+/* line 52, ../compass/sass/style.scss */
+body.brown {
+  color: red;
+  background-color: #FFF4DC;
+}
+/* line 55, ../compass/sass/style.scss */
+body.brown .header {
+  background-color: #FFF4DC;
+}
+/* line 59, ../compass/sass/style.scss */
+body.brown .introduction .introduction__title {
+  color: #4c7ab8;
+}
+/* line 62, ../compass/sass/style.scss */
+body.brown .introduction .introduction__description {
+  color: #4c7ab8;
+}
+/* line 65, ../compass/sass/style.scss */
+body.brown .introduction .introdcution__paragraph {
+  color: #4c7ab8;
+}
+/* line 68, ../compass/sass/style.scss */
+body.brown .introduction .introduction__link {
+  border-color: #4c7ab8;
+}
+/* line 72, ../compass/sass/style.scss */
+body.brown .separator {
+  background: #4c7ab8;
+}
+
+/* line 76, ../compass/sass/style.scss */
+body.white {
+  color: red;
+  background-color: #FFF;
+}
+/* line 79, ../compass/sass/style.scss */
+body.white .header {
+  background-color: #FFF;
+}
+
+/* line 84, ../compass/sass/style.scss */
+.toto {
+  width: 300px;
+  height: 300px;
+  background: #F0F;
+}
+
+/* line 90, ../compass/sass/style.scss */
 a {
   font-size: 1.45em;
   color: #4c7ab8;
@@ -17,32 +105,32 @@ a {
   padding-bottom: 4px;
   font-weight: normal;
 }
-/* line 22, ../compass/sass/style.scss */
+/* line 96, ../compass/sass/style.scss */
 a:hover {
   text-decoration: none;
 }
-/* line 25, ../compass/sass/style.scss */
+/* line 99, ../compass/sass/style.scss */
 a.green {
   color: #8fd0ad;
   border-bottom: solid 3px #8fd0ad;
 }
-/* line 29, ../compass/sass/style.scss */
+/* line 103, ../compass/sass/style.scss */
 a.red {
   color: #f89692;
   border-bottom: solid 3px #f89692;
 }
-/* line 33, ../compass/sass/style.scss */
+/* line 107, ../compass/sass/style.scss */
 a.yellow {
   color: #fec785;
   border-bottom: solid 3px #fec785;
 }
-/* line 37, ../compass/sass/style.scss */
+/* line 111, ../compass/sass/style.scss */
 a.blue {
   color: #4c7ab8;
   border-bottom: solid 3px #4c7ab8;
 }
 
-/* line 42, ../compass/sass/style.scss */
+/* line 116, ../compass/sass/style.scss */
 .separator {
   width: 50px;
   height: 3px;
@@ -53,7 +141,7 @@ a.blue {
 /*-------------------------------------------*\
   HEADER
 /*-------------------------------------------*/
-/* line 51, ../compass/sass/style.scss */
+/* line 125, ../compass/sass/style.scss */
 .header {
   position: fixed;
   width: 100%;
@@ -61,11 +149,11 @@ a.blue {
   z-index: 2;
   height: 135px;
 }
-/* line 58, ../compass/sass/style.scss */
+/* line 132, ../compass/sass/style.scss */
 .header .container {
   position: relative;
 }
-/* line 62, ../compass/sass/style.scss */
+/* line 136, ../compass/sass/style.scss */
 .header .header__logo {
   margin: 0 auto;
   width: 224px;
@@ -75,7 +163,7 @@ a.blue {
   background-repeat: no-repeat;
   margin-top: -86px;
 }
-/* line 70, ../compass/sass/style.scss */
+/* line 144, ../compass/sass/style.scss */
 .header .header__logo svg {
   width: 100%;
 }
@@ -83,21 +171,21 @@ a.blue {
 /*-------------------------------------------*\
   INTRODUCTION
 /*-------------------------------------------*/
-/* line 80, ../compass/sass/style.scss */
+/* line 154, ../compass/sass/style.scss */
 .introduction {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 50px;
   margin-top: 33px;
 }
-/* line 85, ../compass/sass/style.scss */
+/* line 159, ../compass/sass/style.scss */
 .introduction .introduction__title {
   color: #fec785;
   font-size: 2.6em;
   letter-spacing: 4px;
   margin-bottom: 16px;
 }
-/* line 91, ../compass/sass/style.scss */
+/* line 165, ../compass/sass/style.scss */
 .introduction .introduction__description {
   color: #babcbe;
   display: inline-block;
@@ -105,11 +193,29 @@ a.blue {
   letter-spacing: 5px;
   margin-top: 8px;
 }
+/* line 172, ../compass/sass/style.scss */
+.introduction .introdcution__paragraph {
+  color: #fec785;
+  text-transform: none;
+  font-size: 1.3em;
+  margin-top: 40px;
+}
+/* line 177, ../compass/sass/style.scss */
+.introduction .introdcution__paragraph p {
+  margin-bottom: 30px;
+}
+/* line 181, ../compass/sass/style.scss */
+.introduction .introduction__link {
+  font-size: 1em;
+  border-bottom: solid 3px #FFF;
+  display: inline-block;
+  margin-top: 40px;
+}
 
 /*-------------------------------------------*\
   SITE CONTENT
 /*-------------------------------------------*/
-/* line 102, ../compass/sass/style.scss */
+/* line 191, ../compass/sass/style.scss */
 .site-content {
   padding-top: 128px;
 }
@@ -117,17 +223,17 @@ a.blue {
 /*-------------------------------------------*\
   ISOTOPE
 /*-------------------------------------------*/
-/* line 110, ../compass/sass/style.scss */
+/* line 199, ../compass/sass/style.scss */
 .isotope .isotope__item {
   max-width: 100%;
   position: relative;
   padding: 30px !important;
 }
-/* line 115, ../compass/sass/style.scss */
+/* line 204, ../compass/sass/style.scss */
 .isotope .isotope__item img {
   max-width: 100%;
 }
-/* line 120, ../compass/sass/style.scss */
+/* line 209, ../compass/sass/style.scss */
 .isotope .isotope__item__mask {
   position: absolute;
   top: 0px;
@@ -139,14 +245,14 @@ a.blue {
   overflow: hidden;
   color: #FFF;
 }
-/* line 133, ../compass/sass/style.scss */
+/* line 222, ../compass/sass/style.scss */
 .isotope .isotope__item__mask__separator {
   width: 25px;
   height: 4px;
   background: #FFF;
   margin-bottom: 15px;
 }
-/* line 140, ../compass/sass/style.scss */
+/* line 229, ../compass/sass/style.scss */
 .isotope .isotope__item__mask__paragraph {
   font-size: 1.3em;
   width: 53%;
@@ -156,7 +262,7 @@ a.blue {
   /* Chrome, Safari, Opera */
   animation-duration: 0.5s;
 }
-/* line 149, ../compass/sass/style.scss */
+/* line 238, ../compass/sass/style.scss */
 .isotope .isotope__item__mask__title {
   text-transform: uppercase;
   font-weight: normal;
@@ -172,21 +278,21 @@ a.blue {
 /*-------------------------------------------*\
   NAV
 /*-------------------------------------------*/
-/* line 165, ../compass/sass/style.scss */
+/* line 254, ../compass/sass/style.scss */
 .nav {
   overflow: hidden;
 }
-/* line 167, ../compass/sass/style.scss */
+/* line 256, ../compass/sass/style.scss */
 .nav a {
   margin: 15px;
 }
-/* line 170, ../compass/sass/style.scss */
+/* line 259, ../compass/sass/style.scss */
 .nav .nav__left {
   position: absolute;
   left: 30px;
   top: 40px;
 }
-/* line 175, ../compass/sass/style.scss */
+/* line 264, ../compass/sass/style.scss */
 .nav .nav__right {
   position: absolute;
   right: 30px;
@@ -195,7 +301,7 @@ a.blue {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 2200px) {
-  /* line 184, ../compass/sass/style.scss */
+  /* line 273, ../compass/sass/style.scss */
   .container-fluid {
     width: 2200px;
     position: relative;

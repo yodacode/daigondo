@@ -1,12 +1,13 @@
 var Isotope = require('isotope-layout');
-var $ = require('jquery');
+global.$ = require('jquery');
+
 
 var currentColor = 0;
 
 var Item = function (item) {
     this.item = item;
     this.needResize = false;
-    
+
 
     this.build();
 };
@@ -19,7 +20,7 @@ Item.prototype.pickColor = function () {
         '#F29A94',
         '#B6D5E0',
     ];
-     
+
     if (currentColor === colors.length - 1) {
         currentColor = 0;
     } else {
@@ -33,9 +34,9 @@ Item.prototype.build = function () {
     this.item.find('.isotope__item__mask').remove();
     this.mask = $('<div>').addClass('isotope__item__mask')
         .attr('data-mask', '')
-        .css('background-color', this.pickColor())        
+        .css('background-color', this.pickColor())
         .hide();
-    
+
     this.mask.css({
         'height': this.item.find('img').height(),
         'width': this.item.find('img').width(),
@@ -73,7 +74,7 @@ Item.prototype.bind = function () {
                 that.build();
             }
             $(this).find('[data-mask]').stop(true, false).fadeIn(400);
-        }, function() {            
+        }, function() {
             $(this).find('[data-mask]').stop(true, false).fadeOut(400);
         }
     );
@@ -83,6 +84,49 @@ Item.prototype.bind = function () {
     });
 };
 
+var Page = function () {
+    this.linkProfil = $('[data-link-profil]');
+    this.linkPortfolio = $('[data-link-portfolio]');
+    this.linkContact = $('[data-link-contact]');
+    this.bind();
+    console.log(this);
+};
+
+Page.prototype.bind = function () {
+    var that = this;
+
+    this.linkPortfolio.on('click', function (e) {
+        e.preventDefault();
+        that.changeColor('white');
+        that.getPage('portfolio');
+    });
+
+    this.linkProfil.on('click', function (e) {
+        e.preventDefault();
+        that.changeColor('blue');
+        that.getPage('profil');
+    });
+
+    this.linkContact.on('click', function (e) {
+        e.preventDefault();
+        that.changeColor('brown');
+        that.getPage('contact');
+    });
+};
+
+Page.prototype.changeColor = function (color) {
+    $('body').removeClass('white brown blue')
+    $('body').addClass(color);
+};
+
+Page.prototype.getPage = function (page) {
+    $('[data-page]').hide();
+    $('[data-page-' + page + ']').show();
+};
+
+$(function () {
+    var page = new Page();
+});
 
 $(window).load(function() {
     var container = document.querySelector('#isotope');
