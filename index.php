@@ -39,7 +39,7 @@
             Follow me <a href="#">Instagram</a> / <a href="#">Pinterest</a>
             </div>
         </aside> 
-        
+
         <section class="container-fluid site-content">
             <div data-page data-page-portfolio class="animated fadeIn">
                 <section class="introduction">
@@ -49,18 +49,18 @@
                 </section>
 
                 <div id="isotope" class="isotope">
-                
-                <?php foreach ($datas as $data) : ?>
-                    <article 
-                        data-item
-                        data-title="<?php echo $data['title']; ?>"                        
-                        data-category="<?php echo $data['category']; ?>"                        
-                        data-reference="<?php echo $data['reference']; ?>"                        
-                        class="isotope__item col-lg-4 col-md-4 col-sm-6">
-                        <img src='img/<?php echo $data['img']; ?>'/>
-                    </article>
-                <?php endforeach; ?>
-                
+                    
+                    <?php foreach ($datas as $data) : ?>
+                        <article 
+                            data-item
+                            data-title="<?php echo $data['title']; ?>"                        
+                            data-category="<?php echo $data['category']; ?>"                        
+                            data-reference="<?php echo $data['reference']; ?>"                        
+                            class="isotope__item col-lg-4 col-md-4 col-sm-6">
+                            <img src='img/<?php echo $data['img']; ?>'/>
+                        </article>
+                    <?php endforeach; ?>
+                </div>
             </div>
             <div data-page data-page-profil class="animated fadeIn">
                 <section class="introduction">
@@ -93,7 +93,7 @@
                             to contact Dai Gondo
                         </p>
                         <p>
-                            <a href="mailto:daigondo@gmail.com" class="introduction__link">daigondo@gmail.com</a>
+                            <a href="#" class="introduction__link">daigondo@gmail.com</a>
                         </p>
                     </div>
                 </section>
