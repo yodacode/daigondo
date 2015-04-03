@@ -1,3 +1,4 @@
+<?php include 'data.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,7 @@
         
         <header class="header">
             <div class="container-fluid">
-                <a href="#" class="header__logo">
+                <a href="#" class="header__logo" data-logo>
                     <?php include('logo.php') ?>
                 </a>
                 <nav class="nav">
@@ -48,12 +49,18 @@
                 </section>
 
                 <div id="isotope" class="isotope">
-                    <?php for ($i=1; $i < 8; $i++) : ?>
-                        <article class="isotope__item col-lg-4 col-md-4 col-sm-6" data-item>
-                            <img src='img/img<?php echo $i; ?>.jpg'/>
-                        </article>
-                    <?php endfor; ?>
-                </div>
+                
+                <?php foreach ($datas as $data) : ?>
+                    <article 
+                        data-item
+                        data-title="<?php echo $data['title']; ?>"                        
+                        data-category="<?php echo $data['category']; ?>"                        
+                        data-reference="<?php echo $data['reference']; ?>"                        
+                        class="isotope__item col-lg-4 col-md-4 col-sm-6">
+                        <img src='img/<?php echo $data['img']; ?>'/>
+                    </article>
+                <?php endforeach; ?>
+                
             </div>
             <div data-page data-page-profil class="animated fadeIn">
                 <section class="introduction">
@@ -86,7 +93,7 @@
                             to contact Dai Gondo
                         </p>
                         <p>
-                            <a href="#" class="introduction__link">daigondo@gmail.com</a>
+                            <a href="mailto:daigondo@gmail.com" class="introduction__link">daigondo@gmail.com</a>
                         </p>
                     </div>
                 </section>

@@ -8,7 +8,6 @@ var Item = function (item) {
     this.item = item;
     this.needResize = false;
 
-
     this.build();
 };
 
@@ -31,40 +30,49 @@ Item.prototype.pickColor = function () {
 };
 
 Item.prototype.build = function () {
-    this.item.find('.isotope__item__mask').remove();
-    this.mask = $('<div>').addClass('isotope__item__mask')
+
+    var data = this.item.data();
+
+    this.item.prepend(this.getMask(data));
+    this.needResize = false;
+    this.bind();
+};
+
+Item.prototype.getMask = function (data) {
+
+    var mask;
+    this.item.find('.isotope__item__mask').remove();    
+    
+    mask = $('<div>').addClass('isotope__item__mask')
         .attr('data-mask', '')
         .css('background-color', this.pickColor())
         .hide();
 
-    this.mask.css({
+    mask.css({
         'height': this.item.find('img').height(),
         'width': this.item.find('img').width(),
         'margin-left': '30px',
         'margin-top': '30px',
     });
 
-    this.mask.append(
+    mask.append(
         $('<div>').addClass('isotope__item__mask__content')
         .append(
-            $('<h2>').addClass('isotope__item__mask__title animated fadeIn').text('Chevignon')
+            $('<h2>').addClass('isotope__item__mask__title animated fadeIn').text(data.title)
         )
         .append(
             $('<div>').addClass('isotope__item__mask__separator')
         )
         .append(
-            $('<p>').addClass('isotope__item__mask__paragraph animated fadeInUp').text('Collection t-shirt Summer 2015')
+            $('<p>').addClass('isotope__item__mask__paragraph animated fadeInUp').text(data.category)
         )
         .append(
-            $('<p>').addClass('isotope__item__mask__paragraph animated fadeInUp').text('Made at Sublim Design')
+            $('<p>').addClass('isotope__item__mask__paragraph animated fadeInUp').text(data.reference)
         )
     );
 
-    this.item.prepend(this.mask);
-    this.needResize = false;
-    this.bind();
+    return mask;
 };
-
 Item.prototype.bind = function () {
     var that = this;
 
@@ -86,7 +94,7 @@ Item.prototype.bind = function () {
 
 var Page = function () {
     this.linkProfil = $('[data-link-profil]');
-    this.linkPortfolio = $('[data-link-portfolio]');
+    this.linkPortfolio = $('[data-link-portfolio], [data-logo]');
     this.linkContact = $('[data-link-contact]');
     $('[data-page-profil], [data-page-contact]').hide();
     this.bind();
@@ -130,10 +138,8 @@ $(function () {
 });
 
 $(window).load(function() {
-    var container = document.querySelector('#isotope');
-    // init
-    var iso = new Isotope(container, {
-        // options
+    var container = document.querySelector('#isotope'); 
+    var iso = new Isotope(container, {        
         itemSelector: '.isotope__item',
         layoutMode: 'masonry',
     });
