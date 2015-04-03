@@ -22,6 +22,9 @@ body, header {
 a:focus, a:hover {
     text-decoration: none;
 }
+.hidden {
+    display: none;
+}
 
 body.blue {
     color: red;
@@ -47,6 +50,16 @@ body.blue {
     .separator {    
         background: #FFF;  
     }
+    .footer {
+        background: none;
+        color: #FFF;
+    }
+    .sidebar {        
+        color: #FFF;
+        a {
+            color: #FFF;
+        }
+    }
 }
 
 body.brown {
@@ -71,6 +84,9 @@ body.brown {
     }
     .separator {    
         background: $blue;    
+    }
+    .footer {
+        background: none;
     }
 }
 body.white {
@@ -188,8 +204,48 @@ a {
 /*-------------------------------------------*\
   SITE CONTENT
 /*-------------------------------------------*/
+.site {
+    position: relative;
+}
 .site-content {
     padding-top: 128px;
+}
+
+/*-------------------------------------------*\
+  SIDEBAR
+/*-------------------------------------------*/
+.sidebar {
+    position: fixed;
+    right: -194px;
+    top: 60%;
+    z-index: 100;
+    font-size: 16px;
+    color: $blueLight;
+    a {
+        color: $blueLight;
+        font-size: 16px;
+    }
+}
+.vertical {    
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+}
+
+/*-------------------------------------------*\
+  FOOTER
+/*-------------------------------------------*/
+.footer {
+    display: block;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 15px 0px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #5E5E5E;
+    text: initial;
+    font-style: italic;
+    font-size: 0.8em;
 }
 
 /*-------------------------------------------*\
