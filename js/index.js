@@ -88,6 +88,7 @@ var Page = function () {
     this.linkProfil = $('[data-link-profil]');
     this.linkPortfolio = $('[data-link-portfolio]');
     this.linkContact = $('[data-link-contact]');
+    $('[data-page-profil], [data-page-contact]').hide();
     this.bind();
     console.log(this);
 };
