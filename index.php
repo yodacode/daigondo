@@ -26,8 +26,9 @@
                     <div class="nav__left">
                         <a href="#" class="green" data-link-profil>Profil</a>
                         <a href="#" class="yellow" data-link-portfolio>Portfolio</a>
+                        <a href="#" class="red hidden-sm hidden-lg hidden-md" data-link-contact>Contact</a>
                     </div>
-                    <div class="nav__right">
+                    <div class="nav__right hidden-xs">
                         <a href="#" class="red" data-link-contact>Contact</a>
                     </div>
                 </nav>
@@ -36,7 +37,7 @@
 
         <aside class="sidebar">
             <div class="vertical">
-            Follow me <a href="#">Instagram</a> / <a href="#">Pinterest</a>
+                Follow me <a href="#">Instagram</a> / <a href="#">Pinterest</a>
             </div>
         </aside> 
 

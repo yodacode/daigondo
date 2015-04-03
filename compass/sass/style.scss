@@ -33,6 +33,7 @@ body.blue {
         background-color: $blueLight;
     }
     .introduction {
+        margin-top: 7%;
         .introduction__title {
             color: #FFF;
         }
@@ -51,7 +52,6 @@ body.blue {
         background: #FFF;  
     }
     .footer {
-        background: none;
         color: #FFF;
     }
     .sidebar {        
@@ -69,6 +69,7 @@ body.brown {
         background-color: $brown;
     }
     .introduction {
+        margin-top: 7%;
         .introduction__title {
             color: $blue;
         }
@@ -81,12 +82,16 @@ body.brown {
         .introduction__link {
             border-color: $blue;
         }
+        .introduction__link:hover {
+          color: #FEC785;          
+          border-color: #FEC785;
+        }
     }
     .separator {    
         background: $blue;    
     }
     .footer {
-        background: none;
+        color: $blue;
     }
 }
 body.white {
@@ -170,8 +175,8 @@ a {
 .introduction {
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 50px;
-    margin-top: 7%;
+    margin-bottom: 50px;    
+    margin-top: 48px;
     .introduction__title {
         color: $yellow;
         font-size: 2.6em;
@@ -227,8 +232,13 @@ a {
     }
 }
 .vertical {    
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
     transform: rotate(-90deg);
     transform-origin: left top 0;
+   -ms-transform-origin: left top 0; /* IE 9 */
+   -webkit-transform-origin: left top 0; /* Chrome, Safari, Opera */
+   transform-origin: left top 0;
 }
 
 /*-------------------------------------------*\
@@ -241,10 +251,10 @@ a {
     width: 100%;
     bottom: 10px;
     padding: 15px 0px;
-    color: #5E5E5E;
+    color: #D2D1D1;
     text: initial;
     font-style: italic;
-    font-size: 0.8em;
+    font-size: 0.95em;
 }
 
 /*-------------------------------------------*\
@@ -328,5 +338,32 @@ a {
     .container-fluid {
         width: 2200px;
         position: relative;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-content {
+      padding-top: 200px;
+    }
+    .header {
+        height: 180px;
+    }
+    .nav {
+        overflow: hidden;
+        a {
+            margin: 15px;
+        }
+        .nav__left {
+            top: 140px;
+            width: 100%;
+            text-align: center;
+            left: 0px;
+        }
+        .nav__right {            
+            top: 140px;
+        }
+    }
+    .sidebar {
+        top: 75%;
     }
 }
