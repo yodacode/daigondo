@@ -168,7 +168,12 @@ a {
     }
 }
 
-
+/*-------------------------------------------*\
+  BLOCK
+/*-------------------------------------------*/
+.block {
+    margin-bottom: 50px;
+}
 /*-------------------------------------------*\
   INTRODUCTION
 /*-------------------------------------------*/
@@ -182,6 +187,13 @@ a {
         font-size: 2.6em;
         letter-spacing: 4px;
         margin-bottom: 16px;
+    }
+    .introduction__picture {
+        width: 100%;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
     }
     .introduction__description {
         color: $grey;
