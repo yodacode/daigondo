@@ -98,7 +98,7 @@ var Page = function () {
     this.linkProfil = $('[data-link-profil]');
     this.linkPortfolio = $('[data-link-portfolio]');
     this.linkContact = $('[data-link-contact]');
-    // $('[data-page-profil], [data-page-contact]').hide();
+    $('[data-page-profil], [data-page-contact]').hide();
     this.bind();
     console.log(this);
 };
@@ -135,20 +135,29 @@ Page.prototype.getPage = function (page) {
     $('[data-page-' + page + ']').show();
 };
 
-$(function () {
-    var page = new Page();
-});
-
 $(window).load(function() {
+    var page = new Page();
     var container = document.querySelector('#isotope'); 
     var iso = new Isotope(container, {        
         itemSelector: '.isotope__item',
         layoutMode: 'masonry',
     });
 
+
     $('[data-item]').each(function () {
         new Item($(this));
     });
+
+    var wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
 
 });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})

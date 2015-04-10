@@ -173,7 +173,10 @@ a {
 /*-------------------------------------------*/
 .block {
     margin-bottom: 50px;
+    
 }
+
+
 /*-------------------------------------------*\
   INTRODUCTION
 /*-------------------------------------------*/
@@ -192,7 +195,7 @@ a {
         width: 100%;
         margin: 0 auto;
         img {
-            width: 100%;
+            width: 80%;
         }
     }
     .introduction__description {
@@ -209,6 +212,13 @@ a {
         margin-top: 40px;
         p {
             margin-bottom: 30px;
+        }
+        a {
+            font-size: 1em;
+            color: #FFF;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     }
     .introduction__link {
