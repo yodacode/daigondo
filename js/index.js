@@ -97,8 +97,7 @@ var Page = function () {
     this.linkPortfolio = $('[data-link-portfolio]');
     this.linkContact = $('[data-link-contact]');
     $('[data-page-profil], [data-page-contact]').hide();
-    this.bind();
-    console.log(this);
+    this.bind();    
 };
 
 Page.prototype.bind = function () {
@@ -145,16 +144,5 @@ $(window).load(function() {
     $('[data-item]').each(function () {
         new Item($(this));
     });
-
-    var wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset:       100,
-        callback:     function(box) {
-          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-        }
-      }
-    );
-    wow.init();
 
 });

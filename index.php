@@ -81,16 +81,16 @@
                         </p>
                     </div>
                 </section>
-                <section class="introduction container">
+                <section class="introduction">
                     <h1 class="introduction__title">Things he enjoys</h1>
                     <div class="separator"></div>
                         <div class="row">
-                            <div class="col-md-6 block wow fadeIn" data-wow-duration="1s">
-                                <div class="introduction__picture">
+                            <div class="col-md-6 block">
+                                <div class="introduction__picture animated fadeInUp">
                                     <img src="img/profile/shoe.png" alt="Tiger"/>
                                 </div>
-                                <h2 class="introduction__title">Great Scott !</h2>
-                                <div class="introdcution__paragraph">
+                                <h2 class="introduction__title animated fadeInUpBig">Great Scott !</h2>
+                                <div class="introdcution__paragraph animated fadeInUpBig">
                                     <p>
                                         "Back to the future" is probably his<br>
                                         favorite movie. But he also likes prison<br>
@@ -100,12 +100,12 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6 block wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
-                                <div class="introduction__picture">
+                            <div class="col-md-6 block">
+                                <div class="introduction__picture animated fadeInUp">
                                     <img src="img/profile/gun.png" alt="Tiger"/>
                                 </div>
-                                <h2 class="introduction__title">Call of Duty</h2>
-                                <div class="introdcution__paragraph">
+                                <h2 class="introduction__title animated fadeInUpBig">Call of Duty</h2>
+                                <div class="introdcution__paragraph animated fadeInUpBig">
                                     <p>                                    
                                         He often plays video games like Call of Duty<br>
                                         with office colleagues, and kicks some<br>
@@ -115,12 +115,12 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 block wow fadeIn" data-wow-duration="1s" data-wow-delay="2s">
-                                <div class="introduction__picture">
+                            <div class="col-md-6 block">
+                                <div class="introduction__picture animated fadeInUp">
                                     <img src="img/profile/nas.png" alt="Tiger"/>
                                 </div>
-                                <h2 class="introduction__title">It was written</h2>
-                                <div class="introdcution__paragraph">
+                                <h2 class="introduction__title animated fadeInUpBig">It was written</h2>
+                                <div class="introdcution__paragraph animated fadeInUpBig">
                                     <p>
                                         Nas is certainly the number one among hip hop<br>
                                         artists for Dai, However he also listens to pop music<br>
@@ -131,11 +131,11 @@
                             </div>
 
                             <div class="col-md-6 block">
-                                <div class="introduction__picture wow fadeIn" data-wow-duration="1s" data-wow-delay="3s">
+                                <div class="introduction__picture animated fadeInUp">
                                     <img src="img/profile/tiger.png" alt="Tiger"/>
                                 </div>
-                                <h2 class="introduction__title">Animals</h2>
-                                <div class="introdcution__paragraph">
+                                <h2 class="introduction__title animated fadeInUpBig">Animals</h2>
+                                <div class="introdcution__paragraph animated fadeInUpBig">
                                     <p>
                                         He gets along very well with animals.<br>
                                         He cares for red pandas, koalas,<br> 
@@ -184,9 +184,18 @@
 
     <footer class="footer">
         &copy; All right Reserved 2015. Copyright Dai Gondo
-    </footer>
-    <script type="text/javascript" src="js/wow.js"></script>
+    </footer>    
     <script type="text/javascript" src="js/bundle.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/viewport.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.block').viewportChecker({
+                classToAdd: 'animated fadeIn',
+                offset: 500
+            });
+        });
+    </script>
 
 </body>
 </html>
