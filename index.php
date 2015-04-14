@@ -7,14 +7,15 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
+    <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
     <style>
       body {
-        font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+        font-family: 'Nunito', sans-serif;
       }
     </style>
 </head>
-<body>    
+<body>
     <div class="site">
 
         <header class="header">
@@ -84,73 +85,75 @@
                 <section class="introduction">
                     <h1 class="introduction__title">Things he enjoys</h1>
                     <div class="separator"></div>
-                        <div class="row">
-                            <div class="col-md-6 block">
-                                <div class="introduction__picture animated fadeInUp">
-                                    <img src="img/profile/shoe.png" alt="Tiger"/>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 block">
+                                    <div class="introduction__picture">
+                                        <img src="img/profile/shoe.png" alt="Tiger"/>
+                                    </div>
+                                    <h2 class="introduction__title introdcution__title__animate" style="margin-top:-40px">Great Scott !</h2>
+                                    <div class="introdcution__paragraph introdcution__paragraph__animate">
+                                        <p>
+                                            "Back to the future" is probably his<br>
+                                            favorite movie. But he also likes prison<br>
+                                            movies or a good film plenty of hungry<br>
+                                            zombies
+                                        </p>
+                                    </div>
                                 </div>
-                                <h2 class="introduction__title animated fadeInUpBig">Great Scott !</h2>
-                                <div class="introdcution__paragraph animated fadeInUpBig">
-                                    <p>
-                                        "Back to the future" is probably his<br>
-                                        favorite movie. But he also likes prison<br>
-                                        movies or a good film plenty of hungry<br>
-                                        zombies
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div class="col-md-6 block">
-                                <div class="introduction__picture animated fadeInUp">
-                                    <img src="img/profile/gun.png" alt="Tiger"/>
-                                </div>
-                                <h2 class="introduction__title animated fadeInUpBig">Call of Duty</h2>
-                                <div class="introdcution__paragraph animated fadeInUpBig">
-                                    <p>                                    
-                                        He often plays video games like Call of Duty<br>
-                                        with office colleagues, and kicks some<br>
-                                        amazing goals in Fifa.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 block">
-                                <div class="introduction__picture animated fadeInUp">
-                                    <img src="img/profile/nas.png" alt="Tiger"/>
-                                </div>
-                                <h2 class="introduction__title animated fadeInUpBig">It was written</h2>
-                                <div class="introdcution__paragraph animated fadeInUpBig">
-                                    <p>
-                                        Nas is certainly the number one among hip hop<br>
-                                        artists for Dai, However he also listens to pop music<br>
-                                        (The Lumineers, Fleetwood Mac) or good <br>
-                                        old Rock 'n' roll.
-                                    </p>
+                                <div class="col-md-6 block">
+                                    <div class="introduction__picture">
+                                        <img src="img/profile/gun.png" alt="Tiger"/>
+                                    </div>
+                                    <h2 class="introduction__title introdcution__title__animate" style="margin-top:-40px">Call of Duty</h2>
+                                    <div class="introdcution__paragraph introdcution__paragraph__animate">
+                                        <p>
+                                            He often plays video games like Call of Duty<br>
+                                            with office colleagues, and kicks some<br>
+                                            amazing goals in Fifa.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6 block">
+                                    <div class="introduction__picture">
+                                        <img src="img/profile/nas.png" alt="Tiger"/>
+                                    </div>
+                                    <h2 class="introduction__title introdcution__title__animate">It was written</h2>
+                                    <div class="introdcution__paragraph introdcution__paragraph__animate">
+                                        <p>
+                                            Nas is certainly the number one among hip hop<br>
+                                            artists for Dai, However he also listens to pop music<br>
+                                            (The Lumineers, Fleetwood Mac) or good <br>
+                                            old Rock 'n' roll.
+                                        </p>
+                                    </div>
+                                </div>
 
-                            <div class="col-md-6 block">
-                                <div class="introduction__picture animated fadeInUp">
-                                    <img src="img/profile/tiger.png" alt="Tiger"/>
-                                </div>
-                                <h2 class="introduction__title animated fadeInUpBig">Animals</h2>
-                                <div class="introdcution__paragraph animated fadeInUpBig">
-                                    <p>
-                                        He gets along very well with animals.<br>
-                                        He cares for red pandas, koalas,<br> 
-                                        hedgehogs and his cat Bimi even if he eats<br> 
-                                        all his plants!
-                                    </p>
+                                <div class="col-md-6 block">
+                                    <div class="introduction__picture">
+                                        <img src="img/profile/tiger.png" alt="Tiger"/>
+                                    </div>
+                                    <h2 class="introduction__title introdcution__title__animate">Animals</h2>
+                                    <div class="introdcution__paragraph introdcution__paragraph__animate">
+                                        <p>
+                                            He gets along very well with animals.<br>
+                                            He cares for red pandas, koalas,<br>
+                                            hedgehogs and his cat Bimi even if he eats<br>
+                                            all his plants!
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="separator"></div>
-                                <div class="introdcution__paragraph">
+                                <div class="introdcution__paragraph lol">
                                     <p>
-                                        Special thanks to his friend and room-mate<br> 
+                                        Special thanks to his friend and room-mate<br>
                                         <a href="http://benjamin-devaublanc.com">Benjamin Devaublanc</a> who did the web development in<br>
                                         exchange of washing the dishes during 2 long weeks.
                                     </p>
@@ -184,15 +187,15 @@
 
     <footer class="footer">
         &copy; All right Reserved 2015. Copyright Dai Gondo
-    </footer>    
+    </footer>
     <script type="text/javascript" src="js/bundle.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/viewport.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('.block').viewportChecker({
-                classToAdd: 'animated fadeIn',
-                offset: 500
+            $('.introduction__picture, .introdcution__paragraph__animate, .introdcution__title__animate').addClass("hid").viewportChecker({
+                classToAdd: 'vis animated fadeInUp',
+                offset: 50
             });
         });
     </script>

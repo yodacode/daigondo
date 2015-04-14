@@ -11,51 +11,11 @@ $grey: #babcbe;
 $brown: #FFF4DC;
 $blueLight: #9ECCCF;
 
-.blockasdasd {    
-    text-align: center;
-    animation: fadein 5s;
-    -moz-animation: fadein 5s; /* Firefox */
-    -webkit-animation: fadein 5s; /* Safari and Chrome */
-    -o-animation: fadein 5s; /* Opera */
+.hid{
+     opacity:0;
 }
-
-@keyframes fadein {
-    from {
-        opacity:0;
-        margin-top: -15px;
-    }
-    to {
-        opacity:1;
-        margin-top: 0px;
-    }
-}
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        margin-top: -15px;
-        opacity:0;
-    }
-    to {
-        margin-top: 0px;
-        opacity:1;
-    }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        margin-top: 0px;
-        opacity:0;
-    }
-    to {
-        opacity:1;
-        margin-top: -15px;
-    }
-}
-@-o-keyframes fadein { /* Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
+.vis{
+    opacity:1;
 }
 
 /*-------------------------------------------*\
@@ -88,6 +48,11 @@ body.blue {
         }
         .introdcution__paragraph {
             color: #FFF;
+            &.lol {
+                font-size: 1em;
+                margin-top: 75px;
+                margin-bottom: 90px;
+            }
         }
     }
     .green {
@@ -250,6 +215,11 @@ a {
         letter-spacing: 5px;
         margin-top: 8px;
     }
+
+    .introdcution__title__animate {
+        margin-top: 0px;    
+    }
+
     .introdcution__paragraph {
         color: $yellow;
         text-transform: none;
@@ -327,6 +297,13 @@ a {
 /*-------------------------------------------*\
   ISOTOPE
 /*-------------------------------------------*/
+@media screen and (min-width:995px) and (max-width:1437px){
+    body{ 
+        .isotope__item {
+            width: 48%;
+        }
+    }   
+}
 .isotope {
     .isotope__item {
         max-width: 100%;
@@ -425,9 +402,15 @@ a {
             width: 100%;
             text-align: center;
             left: 0px;
+            .red {
+                display: inline-block !important;
+            }
         }
         .nav__right {
             top: 140px;
+            .red {
+                display: none !important;
+            }
         }
     }
     .sidebar {
