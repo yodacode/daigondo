@@ -11,7 +11,7 @@
     <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
     <style>
       body {
-        font-family: 'Nunito', sans-serif;
+        font-family: Futura, 'Nunito', sans-serif;
       }
     </style>
 </head>
